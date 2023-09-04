@@ -1,6 +1,4 @@
-import 'package:get/get.dart';
 
-class Nations {
   final List<Map<String, dynamic>> countryCodes = [
     {
       "e164_cc": "93",
@@ -3530,4 +3528,3 @@ class Nations {
       
     }
   ];
-}
