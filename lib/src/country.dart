@@ -18,7 +18,7 @@ class Country {
     displayName: 'World Wide (WW)',
     displayNameNoCountryCode: 'World Wide',
     e164Key: '',
-    nationID: "",
+    nationID: 0,
   );
 
   ///The country phone code
@@ -49,7 +49,7 @@ class Country {
 
   final String displayNameNoCountryCode;
   final String e164Key;
-  final String nationID;
+  final int nationID;
 
   @Deprecated(
     'The modern term is displayNameNoCountryCode. '
