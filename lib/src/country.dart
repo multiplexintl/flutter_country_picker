@@ -18,7 +18,7 @@ class Country {
     displayName: 'World Wide (WW)',
     displayNameNoCountryCode: 'World Wide',
     e164Key: '',
-    nationID: 0,
+    nationID: "",
   );
 
   ///The country phone code
