@@ -18,6 +18,7 @@ class Country {
     displayName: 'World Wide (WW)',
     displayNameNoCountryCode: 'World Wide',
     e164Key: '',
+    nationID: 0,
   );
 
   ///The country phone code
@@ -48,6 +49,7 @@ class Country {
 
   final String displayNameNoCountryCode;
   final String e164Key;
+  final String nationID;
 
   @Deprecated(
     'The modern term is displayNameNoCountryCode. '
@@ -72,6 +74,7 @@ class Country {
     required this.displayName,
     required this.displayNameNoCountryCode,
     required this.e164Key,
+    required this.nationID,
     this.fullExampleWithPlusSign,
   });
 
@@ -86,7 +89,8 @@ class Country {
         displayName = json['display_name'],
         fullExampleWithPlusSign = json['full_example_with_plus_sign'],
         displayNameNoCountryCode = json['display_name_no_e164_cc'],
-        e164Key = json['e164_key'];
+        e164Key = json['e164_key'],
+        nationID = json['nation_id'];
 
   static Country parse(String country) {
     if (country == worldWide.countryCode) {
@@ -117,6 +121,7 @@ class Country {
     data['full_example_with_plus_sign'] = fullExampleWithPlusSign;
     data['display_name_no_e164_cc'] = displayNameNoCountryCode;
     data['e164_key'] = e164Key;
+    data['nation_id'] = nationID;
     return data;
   }
 
@@ -138,7 +143,7 @@ class Country {
   bool get iswWorldWide => countryCode == Country.worldWide.countryCode;
 
   @override
-  String toString() => 'Country(countryCode: $countryCode, name: $name)';
+  String toString() => 'Country(Nation ID: $nationID, name: $name)';
 
   @override
   bool operator ==(Object other) {
